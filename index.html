@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html><!-- Last Published: Tue Nov 15 2022 15:51:36 GMT+0000 (Coordinated Universal Time) -->
+<!DOCTYPE html><!-- Last Published: Tue Nov 15 2022 15:51:36 GMT+0000 (Coordinated Universal Time) -->
 <html data-wf-domain="linear-rebuild.webflow.io" data-wf-page="63493089c13c20990145f050"
     data-wf-site="63493089c13c20961b45f04f" lang="en">
 
@@ -1705,32 +1705,6 @@
             loading="lazy" alt="" class="stars-curve-bg" />
         <div class="stars-curve-bottom stars-curve-bottom--blue"></div>
     </div>
-    <section id="roadmap-warp" class="section-roadmap-warp">
-        <div class="light-bar"></div>
-        <div class="warp-bg">
-            <div class="warp-stars"></div>
-        </div>
-        <div class="container page-padding">
-            <div class="feature-section-header">
-                <h2 class="feature-heading">Roadmap</h2>
-                <h3 class="feature-subheading">Follow the journey and upcoming releases.</h3>
-            </div>
-        </div>
-        <div class="roadmap-warp-inner">
-            <div class="roadmap-track">
-                <div class="roadmap-timeline">
-                    <div class="timeline-line"></div>
-                    <div class="timeline-progress"></div>
-                    <div class="timeline-nodes">
-                        <div class="timeline-node" style="--p:0"><span>Q4 2024</span><div class="node-detail">Launch wallet analytics core and leaderboard streams.</div></div>
-                        <div class="timeline-node" style="--p:0.3333"><span>Q1 2025</span><div class="node-detail">Perp analytics suite and entity attribution updates.</div></div>
-                        <div class="timeline-node" style="--p:0.6667"><span>Q2 2025</span><div class="node-detail">Cross-chain flow mapping and watchlist curation.</div></div>
-                        <div class="timeline-node" style="--p:1"><span>Q3 2025</span><div class="node-detail">DEX and CEX coverage expansion plus PnL panel.</div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="section-cta">
         <div class="container page-padding">
             <div class="section-header"><img
@@ -1809,48 +1783,6 @@
                 keyEl.removeAttribute("data-pressed");
             }
         });
-        const warpSection = document.querySelector("#roadmap-warp");
-        if (warpSection) {
-            const timeline = warpSection.querySelector(".roadmap-timeline");
-            const lineEl = warpSection.querySelector(".timeline-line");
-            const progressEl = warpSection.querySelector(".timeline-progress");
-            const nodes = Array.from(warpSection.querySelectorAll(".timeline-node"));
-            const details = nodes.map((n) => n.querySelector(".node-detail"));
-            ScrollTrigger.create({
-                trigger: warpSection,
-                start: "top 60%",
-                onEnter: () => warpSection.classList.add("visible"),
-                onLeaveBack: () => warpSection.classList.remove("visible")
-            });
-            gsap.set(details, { y: 10, opacity: 0 });
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: warpSection,
-                    start: "top top",
-                    end: () => "+=" + (window.innerWidth * 0.7),
-                    pin: true,
-                    scrub: true
-                }
-            });
-            tl.to(progressEl, { width: () => window.innerWidth * 0.7, ease: "none", duration: 1 }, 0);
-            
-            // Initialize first node active immediately
-            tl.set(nodes[0], { className: "timeline-node active" }, 0);
-            tl.set(details[0], { opacity: 1, y: 0 }, 0);
-
-            const steps = nodes.length - 1;
-            for (let i = 1; i < nodes.length; i++) {
-                const p = i / steps;
-                const d = 0.15; // Duration relative to scroll progress
-                
-                // Fade switch happens BEFORE hitting the node so it's visible upon arrival
-                tl.to(details[i - 1], { opacity: 0, y: -10, duration: d }, p - d);
-                tl.to(details[i], { opacity: 1, y: 0, duration: d }, p - d);
-                
-                // Activate the current node exactly when reaching it (previous nodes stay active)
-                tl.set(nodes[i], { className: "timeline-node active" }, p);
-            }
-        }
     </script>
 </body>
 
