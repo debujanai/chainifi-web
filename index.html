@@ -833,25 +833,18 @@
             <div class="container page-padding">
                 <div class="nav-inner">
                     <div class="nav-menu-wrap">
-                        <div class="nav-menu"><a href="#" class="nav-logo w-inline-block">
-                                <div class="svg-embed w-embed"><img src="logo2.png" alt="ChainfiAI Logo" style="width:18px;height:18px;margin-right:8px" /></div>
-                                <div>ChainfiAI</div>
-                            </a><a href="#alpha-metrics" class="nav-link w-inline-block">
-                                <div>Alpha Metrics</div>
-                            </a><a href="#gauge-profits" class="nav-link w-inline-block">
-                                <div>Gauge Profits</div>
-                            </a><a href="#map-flows" class="nav-link desktop-only w-inline-block">
-                                <div>Map Flows</div>
-                            </a><a href="#smart-rankings" class="nav-link desktop-only w-inline-block">
-                                <div>Smart Rankings</div>
-                            </a><a href="#product-roadmap" class="nav-link desktop-only w-inline-block">
-                                <div>Roadmap</div>
-                            </a></div>
-                        <div class="nav-btns"><a href="#" class="nav-link nav-link--log-in w-inline-block">
-                                <div>DexTools</div>
-                            </a><a href="#" class="cta-button cta-button--nav w-inline-block">
-                                <div>DAPP</div>
-                            </a></div>
+                        <a href="#" class="nav-icon w-inline-block"><img src="logo2.png" alt="ChainfiAI Icon" style="width:20px;height:20px" /></a>
+                        <a href="#" class="nav-title w-inline-block">ChainfiAI</a>
+                        <button class="nav-toggle" aria-label="Menu"><span class="w-icon-nav-menu"></span></button>
+                        <div class="nav-menu">
+                            <a href="#alpha-metrics" class="nav-link w-inline-block"><div>Alpha Metrics</div></a>
+                            <a href="#gauge-profits" class="nav-link w-inline-block"><div>Gauge Profits</div></a>
+                            <a href="#map-flows" class="nav-link w-inline-block"><div>Map Flows</div></a>
+                            <a href="#smart-rankings" class="nav-link w-inline-block"><div>Smart Rankings</div></a>
+                            <a href="#product-roadmap" class="nav-link w-inline-block"><div>Roadmap</div></a>
+                            <a href="#" class="nav-link nav-link--log-in w-inline-block"><div>DexTools</div></a>
+                            <a href="#" class="cta-button cta-button--nav w-inline-block"><div>DAPP</div></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1327,9 +1320,8 @@
                         <div class="feature-cards-wrap">
                             <div id="w-node-_1c7932cc-d1a2-d0b9-155a-42c2d1224a3c-0145f050" class="feature-card">
                                 <div class="feature-card-content">
-                                    <h4 class="card-heading card-heading--feature">Leaderboard and streams</h4>
-                                    <div>Switch between ranked wallet leaderboards and real-time onchain streams to
-                                        analyze activity from every angle.</div><img
+                                    <h4 class="card-heading card-heading--feature">Leaderboard</h4>
+                                    <div>Browse ranked wallet leaderboards and real‑time on‑chain streams to analyze activity fast.</div><img
                                         src="https://assets.website-files.com/63493089c13c20961b45f04f/634ff0baf22c3b3aec23db6d_card-board.webp"
                                         loading="lazy" height="1174" width="2286" sizes="(max-width: 991px) 100vw, 92vw"
                                         srcset="images/image-8.png"
@@ -1338,9 +1330,8 @@
                             </div>
                             <div id="w-node-f1c0b6ea-0852-71dc-ae78-3886525ab6a9-0145f050" class="feature-card">
                                 <div class="feature-card-content">
-                                    <h4 class="card-heading card-heading--feature">Personalize your insights</h4>
-                                    <div>Apply adaptive filters and rich operators to refine wallet lists, track
-                                        favorite addresses, and craft custom analytics views.</div><img
+                                    <h4 class="card-heading card-heading--feature">Personalize</h4>
+                                    <div>Use adaptive filters and rich operators to refine lists and build tailored analytics views.</div><img
                                         src="https://assets.website-files.com/63493089c13c20961b45f04f/634ff1def7785f37f2ba241c_card-views.webp"
                                         loading="lazy" height="823" width="1248" sizes="(max-width: 991px) 100vw, 51vw"
                                         srcset="images/image-3.png"
@@ -1937,6 +1928,28 @@
                 keyEl.removeAttribute("data-pressed");
             }
         });
+    </script>
+    <script>
+        (function () {
+            var nav = document.querySelector('.nav');
+            var toggle = document.querySelector('.nav-toggle');
+            if (!nav || !toggle) return;
+            toggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                nav.classList.toggle('nav--open');
+            });
+            document.addEventListener('click', function (e) {
+                if (!nav.contains(e.target) && nav.classList.contains('nav--open')) {
+                    nav.classList.remove('nav--open');
+                }
+            });
+            var links = nav.querySelectorAll('.nav-menu .nav-link');
+            Array.prototype.forEach.call(links, function (el) {
+                el.addEventListener('click', function () {
+                    nav.classList.remove('nav--open');
+                });
+            });
+        })();
     </script>
 </body>
 
