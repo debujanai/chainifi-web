@@ -2614,19 +2614,49 @@ h3 {
 
 .logos-wrap {
     justify-items: center;
+    justify-content: center;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    grid-column-gap: 24px;
-    grid-row-gap: 32px;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+    gap: 48px;
+    -ms-grid-columns: 160px 160px 160px 160px 160px 160px;
+    grid-template-columns: repeat(6, max-content)
 }
 
 .logo-item {
     width: 100%;
     max-width: 160px
+}
+
+.logos-wrap .logo-item {
+    width: auto;
+    max-width: none;
+    margin: 0 12px
+}
+
+.logos-wrap .logo-item.w-embed {
+    display: none
+}
+
+.logos-wrap .logo-item img {
+    height: 36px;
+    width: auto;
+    display: inline-block;
+    filter: brightness(0) invert(1);
+    opacity: 0.9
+}
+
+@media screen and (max-width:991px) {
+    .logos-wrap .logo-item img {
+        height: 32px
+    }
+}
+
+@media screen and (max-width:479px) {
+    .logos-wrap .logo-item img {
+        height: 28px
+    }
 }
 
 .stars-curve {
@@ -3408,8 +3438,10 @@ h3 {
     }
 
     .logos-wrap {
-        -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr
+        -ms-grid-columns: 160px 160px 160px;
+        grid-template-columns: repeat(3, max-content);
+        justify-content: center;
+        gap: 36px
     }
 
     .logo-item.desktop-only {
@@ -3699,6 +3731,13 @@ h3 {
         grid-column-gap: 16px
     }
 
+    .logos-wrap {
+        grid-template-columns: repeat(2, max-content);
+        justify-content: center;
+        gap: 28px
+    }
+}
+
     .feature-heading {
         font-size: 48px
     }
@@ -3776,7 +3815,7 @@ h3 {
         -ms-flex-align: stretch;
         align-items: stretch
     }
-}
+/* orphaned closing brace removed */
 
 #w-node-_2548d445-5cac-d907-4cc4-e0e179a3c909-0145f050,
 #w-node-_6f428898-e82f-266b-c4c2-ad14c706aaf7-0145f050,
