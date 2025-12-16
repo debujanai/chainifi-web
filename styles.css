@@ -2354,6 +2354,7 @@ h3 {
     font-weight: 500;
 }
 
+
 .hero {
     margin-bottom: -164px;
     padding-top: 176px
@@ -2680,6 +2681,7 @@ h3 {
     grid-template-columns: repeat(6, max-content)
 }
 
+
 .logo-item {
     width: 100%;
     max-width: 160px
@@ -2714,6 +2716,7 @@ h3 {
         height: 28px
     }
 }
+
 
 .stars-curve {
     position: relative;
@@ -2838,7 +2841,6 @@ h3 {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 16px;
     border: 1px solid hsla(0, 0%, 100%, .1);
     border-radius: 48px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0)), to(hsla(0, 0%, 100%, .05)));
@@ -3494,10 +3496,8 @@ h3 {
     }
 
     .logos-wrap {
-        -ms-grid-columns: 160px 160px 160px;
-        grid-template-columns: repeat(3, max-content);
-        justify-content: center;
-        gap: 36px
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr
     }
 
     .logo-item.desktop-only {
@@ -3522,10 +3522,6 @@ h3 {
         min-height: 420px;
         min-width: 100%;
         padding: 32px
-    }
-
-    .highlights-card-logo {
-        height: 200px
     }
 
     .light-bar {
@@ -3589,10 +3585,6 @@ h3 {
 
     .hero-img-wrap {
         padding-bottom: 256px
-    }
-
-    .highlights-card-logo {
-        height: 160px
     }
 
     .nav-link {
@@ -3787,13 +3779,6 @@ h3 {
         grid-column-gap: 16px
     }
 
-    .logos-wrap {
-        grid-template-columns: repeat(2, max-content);
-        justify-content: center;
-        gap: 28px
-    }
-}
-
     .feature-heading {
         font-size: 48px
     }
@@ -3871,7 +3856,7 @@ h3 {
         -ms-flex-align: stretch;
         align-items: stretch
     }
-/* orphaned closing brace removed */
+}
 
 #w-node-_2548d445-5cac-d907-4cc4-e0e179a3c909-0145f050,
 #w-node-_6f428898-e82f-266b-c4c2-ad14c706aaf7-0145f050,
