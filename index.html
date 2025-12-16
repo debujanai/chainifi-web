@@ -912,10 +912,10 @@
                             </a>
                             <a href="https://x.com/chainfiofficial" target="_blank" class="nav-link mobile-only w-inline-block"><div class="svg-embed w-embed"><img src="images/x.png" alt="Twitter" style="width:20px;height:20px" /></div></a>
                             <a href="https://t.me/chainfiaiofficial" target="_blank" class="nav-link mobile-only w-inline-block"><div class="svg-embed w-embed"><img src="images/tg.png" alt="Telegram" style="width:20px;height:20px" /></div></a>
-                            <a href="#" class="nav-link mobile-only w-inline-block"><div>DexTools</div></a>
+                            <a href="https://www.dextools.io/app/en/ether/pair-explorer/0xa94daf0d0c8c1bbc1fd4909eaf8b0feb514ad103?t=1765908077046" target="_blank" class="nav-link mobile-only w-inline-block"><div>DexTools</div></a>
                             <a href="#" class="nav-link mobile-only w-inline-block"><div>DAPP</div></a>
                         </div>
-                        <div class="nav-btns"><a href="https://x.com/chainfiofficial" target="_blank" class="nav-link w-inline-block"><div class="svg-embed w-embed"><img src="images/x.png" alt="Twitter" style="width:20px;height:20px" /></div></a><a href="https://t.me/chainfiaiofficial" target="_blank" class="nav-link w-inline-block"><div class="svg-embed w-embed"><img src="images/tg.png" alt="Telegram" style="width:20px;height:20px" /></div></a><a href="#" class="nav-link nav-link--log-in w-inline-block">
+                        <div class="nav-btns"><a href="https://x.com/chainfiofficial" target="_blank" class="nav-link w-inline-block"><div class="svg-embed w-embed"><img src="images/x.png" alt="Twitter" style="width:20px;height:20px" /></div></a><a href="https://t.me/chainfiaiofficial" target="_blank" class="nav-link w-inline-block"><div class="svg-embed w-embed"><img src="images/tg.png" alt="Telegram" style="width:20px;height:20px" /></div></a><a href="https://www.dextools.io/app/en/ether/pair-explorer/0xa94daf0d0c8c1bbc1fd4909eaf8b0feb514ad103?t=1765908077046" target="_blank" class="nav-link nav-link--log-in w-inline-block">
                                 <div>DexTools</div>
                             </a><a href="#" class="cta-button cta-button--nav w-inline-block">
                                 <div>DAPP</div>
@@ -938,7 +938,7 @@
                             <h2 class="subheading subheading--hero">Leverage ZK-based ranking logic for smarter profits.
                                 Cross-chain alpha, trace, and profit, MEV traceability sealed.</h2>
                             <div class="hero-cta-buttons">
-                                <a href="#" target="_blank" rel="noopener noreferrer" class="cta-button w-inline-block">
+                                <a href="https://whitepaper.chainfiai.io" target="_blank" rel="noopener noreferrer" class="cta-button w-inline-block">
                                     <div>White paper</div>
                                 </a>
                                 <button type="button" class="cta-button hero-ca-button">
@@ -950,7 +950,7 @@
                                             <path d="M6.00039 10.8002L3.20039 8.0002L2.26672 8.93353L6.00039 12.6672L14.0004 4.6672L13.0671 3.73353L6.00039 10.8002Z"></path>
                                         </svg>
                                     </span>
-                                    <span class="hero-copy-text">CA copied</span>
+                                    <span class="hero-copy-text">Copied</span>
                                 </div>
                             </div>
                         </div>
@@ -1984,14 +1984,14 @@
         }
         if (caButton && navigator.clipboard && navigator.clipboard.writeText) {
             caButton.addEventListener("click", function () {
-                navigator.clipboard.writeText("chainfi").then(function () {
+                navigator.clipboard.writeText("0xeDAe2EF1506D268C1C3484662D72368De2112aa2").then(function () {
                     showCopyMessage();
                 });
             });
         } else if (caButton) {
             caButton.addEventListener("click", function () {
                 var textarea = document.createElement("textarea");
-                textarea.value = "chainfi";
+                textarea.value = "0xeDAe2EF1506D268C1C3484662D72368De2112aa2";
                 document.body.appendChild(textarea);
                 textarea.select();
                 try {
