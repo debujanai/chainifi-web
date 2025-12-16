@@ -387,6 +387,15 @@ html[data-w-dynpage] [data-w-cloak] {
     vertical-align: middle !important
 }
 
+/* override webflow badge */
+.w-webflow-badge,
+.w-webflow-badge > img {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
 h1,
 h2,
 h3,
